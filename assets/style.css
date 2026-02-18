@@ -1,0 +1,206 @@
+/* --- Layout principal en dos columnas --- */
+.cv-main-grid {
+  display: grid;
+  grid-template-columns: 348px 1fr; 
+  gap: 40px;
+  align-items: start;
+}
+.cv-aside {
+  background: transparent;
+  border-right: 1px solid #3a3f44;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cv-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.cv-foto-wrapper {
+  margin-bottom: 18px;
+}
+.cv-datos h1 {
+  font-size: 1.8em;          
+  word-break: break-word;
+  text-align: center;
+}
+
+.cv-datos h2 {
+  font-size: 1.1em;
+  text-align: center;
+}
+.cv-info-list {
+  margin-top: 18px;
+}
+.cv-aside .cv-info-list li {
+  justify-content: flex-start;
+}
+.cv-aside .cv-foto {
+  margin: 0 auto;
+}
+.cv-container {
+  max-width: 1000px; 
+  margin: 40px auto;
+  background: #23272a; 
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  padding: 40px;
+  overflow: hidden;  
+}
+/* --- Timeline de logros académicos --- */
+.timeline {
+  position: relative;
+  margin: 32px 0 16px 0;
+  padding-left: 0;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+.timeline-content {
+  background: #23272a;
+  padding: 18px 32px 18px 32px;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.18);
+  color: #f4f4f4;
+  border-left: 5px solid #00bfff;
+  min-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+.timeline-date {
+  color: #00bfff;
+  font-weight: bold;
+  font-size: 1.08em;
+  min-width: 90px;
+  text-align: center;
+  margin-right: 18px;
+  align-self: center;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+}
+.timeline-item {
+  gap: 18px;
+}
+.timeline-item {
+  gap: 0;
+}
+/* --- Estilos visuales didácticos y modernos --- */
+.cv-foto-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+}
+
+.cv-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cv-info-list li {
+  margin-bottom: 7px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+}
+.cv-info-list i {
+  color: #00bfff;
+  min-width: 20px;
+  font-size: 1.1em;
+}
+.cv-info-list span {
+  font-weight: 600;
+  color: #b0b0b0;
+}
+
+section h2 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3em;
+  color: #00bfff;
+}
+
+section ul {
+  padding-left: 24px;
+  margin-bottom: 0;
+}
+
+section li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.cv-footer {
+  text-align: center;
+  margin-top: 32px;
+  color: #888;
+  font-size: 0.95em;
+}
+.cv-footer hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 24px 0 16px 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #181a1b;
+  color: #f4f4f4;
+}
+
+.cv-header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.cv-foto {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 3px solid #00bfff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.40);
+}
+
+.cv-datos h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.2em;
+  color: #00bfff;
+}
+
+.cv-datos h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.2em;
+  color: #b0b0b0;
+  font-weight: 400;
+}
+
+.cv-datos p {
+  margin: 4px 0;
+  font-size: 1em;
+  color: #e0e0e0;
+}
