@@ -1,19 +1,24 @@
 /* --- Layout principal en dos columnas --- */
 .cv-main-grid {
-  display: grid;
-  grid-template-columns: 348px 1fr; 
+  display: flex;
   gap: 40px;
-  align-items: start;
+  align-items: flex-start;
 }
 .cv-aside {
+  width: 348px;
   background: transparent;
   border-right: 1px solid #3a3f44;
   padding-right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: 0;
+  height: fit-content;
+  flex-shrink: 0;
 }
 .cv-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -21,19 +26,7 @@
 .cv-foto-wrapper {
   margin-bottom: 18px;
 }
-.cv-datos h1 {
-  font-size: 1.8em;          
-  word-break: break-word;
-  text-align: center;
-}
 
-.cv-datos h2 {
-  font-size: 1.1em;
-  text-align: center;
-}
-.cv-info-list {
-  margin-top: 18px;
-}
 .cv-aside .cv-info-list li {
   justify-content: flex-start;
 }
@@ -189,7 +182,9 @@ body {
 .cv-datos h1 {
   margin: 0 0 8px 0;
   font-size: 2.2em;
-  color: #00bfff;
+  color: #00bfff;        
+  word-break: break-word;
+  text-align: center;
 }
 
 .cv-datos h2 {
@@ -197,12 +192,53 @@ body {
   font-size: 1.2em;
   color: #b0b0b0;
   font-weight: 400;
+  text-align: center;
 }
 
 .cv-datos p {
   margin: 4px 0;
   font-size: 1em;
   color: #e0e0e0;
+}
+
+.cv-referencias h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.2em;
+  color: #00bfff;        
+  word-break: break-word;
+  text-align: center;
+}
+
+.cv-referencias h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.2em;
+  color: #b0b0b0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.cv-ref-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cv-ref-list li {
+  margin-bottom: 7px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  justify-content: center;
+}
+.cv-ref-list i {
+  color: #00bfff;
+  min-width: 20px;
+  font-size: 1.1em;
+}
+.cv-ref-list span {
+  font-weight: 600;
+  color: #b0b0b0;
 }
 
 /* --- Adaptación para Móviles (Pantallas menores a 768px) --- */
@@ -227,6 +263,7 @@ body {
         width: 100%;
         align-items: center;
         text-align: center;
+        position: static;
     }
 
     .cv-content {
@@ -262,24 +299,5 @@ body {
         padding: 15px;
         box-sizing: border-box;
         word-wrap: break-word;
-    }
-}
-
-/* --- Responsive display for references --- */
-.desktop-only {
-    display: block;
-}
-
-.mobile-only {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .desktop-only {
-        display: none;
-    }
-    
-    .mobile-only {
-        display: block;
     }
 }
