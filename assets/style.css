@@ -301,3 +301,132 @@ body {
         word-wrap: break-word;
     }
 }
+
+/* --- Refinamientos visuales y tarjetas de contenido --- */
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(0, 191, 255, 0.1), transparent 34rem),
+    #14191f;
+  line-height: 1.6;
+}
+
+.cv-container {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #20262e;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.cv-aside {
+  top: 24px;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.cv-foto {
+  border-color: #55c8ed;
+  box-shadow: 0 0 0 7px rgba(85, 200, 237, 0.1);
+}
+
+.cv-content > section {
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+section h2 {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline {
+  gap: 18px;
+}
+
+.timeline-item {
+  align-items: stretch;
+}
+
+.timeline-date {
+  flex: 0 0 140px;
+  align-self: flex-start;
+  margin: 18px 0 0;
+  color: #75d7f6;
+  text-align: left;
+}
+
+.timeline-content {
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-left: 4px solid #55c8ed;
+  background: #252d36;
+}
+
+.language-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  padding: 4px 0 0 28px;
+  list-style: none;
+}
+
+.language-list li {
+  margin: 0;
+  padding: 5px 12px;
+  border: 1px solid rgba(85, 200, 237, 0.25);
+  border-radius: 999px;
+  background: rgba(85, 200, 237, 0.08);
+  color: #b4edff;
+  font-size: 0.92em;
+}
+
+.cv-footer {
+  color: #a4adb8;
+}
+
+@media (max-width: 768px) {
+  .cv-container {
+    max-width: none;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+  }
+
+  .cv-aside {
+    top: auto;
+  }
+
+  .cv-content > section {
+    padding: 18px 15px;
+  }
+
+  .timeline-item {
+    align-items: center;
+  }
+
+  .timeline-date {
+    flex-basis: auto;
+    align-self: center;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cv-content > section,
+  .timeline-content {
+    transition: border-color 180ms ease, background-color 180ms ease;
+  }
+
+  .timeline-content:hover {
+    border-color: rgba(85, 200, 237, 0.28);
+    background: #29333d;
+  }
+}
